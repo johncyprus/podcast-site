@@ -1,0 +1,64 @@
+@use '_base.scss' as *;
+
+.content {
+  grid-row: 2 / -1;
+  grid-column: all-start / content-end;
+  background-color: $color-black;
+
+  @media (min-width: $tablet) {
+    padding-top: 9.3rem;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 8.8rem;
+    padding-right: 5.8rem;
+  }
+
+  &__form {
+    margin-bottom: 4rem;
+  }
+
+  &__titles {
+    margin-bottom: 2.4rem;
+  }
+
+  &__text {
+    width: 70%;
+    margin-bottom: 4rem;
+  }
+
+  &__input {
+    width: 59%;
+    margin-right: -17.1rem;
+    padding-right: 17.8rem;
+  }
+
+  &__input-label {
+    display: block;
+    font-size: 1.4rem;
+    font-weight: bold;
+    line-height: 1.4rem;
+    color: #fb3e3e;
+    padding: 0.8rem 3.2rem;
+
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-4rem);
+    transition: all 0.3s ease-out;
+
+    &.active {
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  &__sponsors {
+    display: flex;
+    align-items: center;
+
+    & img:not(:last-child) {
+      margin-right: 4rem;
+    }
+  }
+}

@@ -1,0 +1,6 @@
+.graphic {
+  grid-row: 5 / span 1;
+  grid-column: graphic-start / all-end;
+  align-self: flex-end;
+  transform: translateY(50%);
+}
