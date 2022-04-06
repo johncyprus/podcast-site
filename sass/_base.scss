@@ -11,7 +11,8 @@ $font-primary: 'Chivo', sans-serif;
 
 // BREAKPOINTS
 $tablet: 768px;
-$desktop: 1400px;
+$desktop-small: 1200px;
+$desktop-large: 1400px;
 
 *,
 *::before,
@@ -37,22 +38,25 @@ body {
   max-height: 100vh;
 
   display: grid;
-  grid-template-columns: 13% 1fr;
-  // grid-template-rows: minmax(13rem, 1fr) min-content minmax(13rem, 1fr);
-  grid-template-rows: 15% 70% 15%;
-}
 
-.home {
-  grid-column: 2 / -1;
-  grid-row: 2 / 3;
+  @media (min-width: $tablet) {
+    grid-template-rows: 1fr min-content 1fr;
+    grid-template-columns:
+      [all-start] min-content
+      [banner-start] 1fr
+      [content-end] 13%
+      [all-end];
+  }
 
-  display: grid;
-  grid-template-columns:
-    [all-start] min-content
-    [logo-end] 1fr
-    [banner-start] 1fr
-    [content-end] 1fr
-    [graphic-start] min-content
-    [all-end];
-  grid-template-rows: repeat(5, 1fr);
+  @media (min-width: $desktop-small) {
+    grid-template-columns:
+      [all-start] 13%
+      [content-start] min-content
+      [logo-end] 1fr
+      [banner-start] 1fr
+      [content-end] 1fr
+      [graphic-start] min-content
+      [all-end];
+    grid-template-rows: 15% repeat(5, 1fr) 15%;
+  }
 }

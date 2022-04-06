@@ -1,6 +1,14 @@
 .graphic {
-  grid-row: 5 / span 1;
-  grid-column: graphic-start / all-end;
-  align-self: flex-end;
-  transform: translateY(50%);
+  @media (min-width: $tablet) {
+    grid-row: 3 / -1;
+    grid-column: 1 / 2;
+    align-self: end;
+    padding-left: 3rem;
+  }
+
+  @media (min-width: $desktop-small) {
+    grid-row: 6 / span 1;
+    grid-column: graphic-start / all-end;
+    transform: translateY(58%);
+  }
 }
