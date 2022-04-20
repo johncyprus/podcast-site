@@ -15,6 +15,7 @@ Users should be able to do the following:
   - The `Email address` field is empty, showing "Oops! Please add your email"
   - The email is not formatted correctly, showing "Oops! Please check your email"
 
+
 ### Built With
 
 - Vanilla JavaScript
@@ -22,6 +23,7 @@ Users should be able to do the following:
 - SCSS custom properties
 - Flexbox
 - CSS Grid
+
 
 ### Screenshots
 
@@ -31,9 +33,9 @@ Desktop:
 Tablet:
 ![Pod Site - Tablet](https://user-images.githubusercontent.com/41877388/164143833-46ca39e4-76af-4919-920f-509bd80f5966.png)
 
-Mobile
-![Pod Site - Mobile](https://user-images.githubusercontent.com/41877388/164143845-2cb0c73e-23d7-4358-bbe7-587d8e85c789.png)
+Mobile:
 
+![Pod Site - Mobile](https://user-images.githubusercontent.com/41877388/164143845-2cb0c73e-23d7-4358-bbe7-587d8e85c789.png)
 
 
 ### Continued Development
