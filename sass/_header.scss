@@ -1,4 +1,10 @@
 .header {
+  @media (max-width: $tablet) {
+    text-align: center;
+    z-index: 10;
+    margin-bottom: 5.7rem;
+  }
+
   @media (min-width: $tablet) {
     grid-row: 1 / 2;
     grid-column: 1 / 2;

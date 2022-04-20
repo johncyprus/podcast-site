@@ -1,9 +1,14 @@
 @use '_base.scss' as *;
 
 .content {
-  background-color: $color-black;
+  @media (max-width: $tablet) {
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+  }
 
   @media (min-width: $tablet) {
+    background-color: $color-black;
     grid-row: 2 / 3;
     grid-column: 1 / 3;
     padding-top: 8.3rem;
@@ -20,18 +25,24 @@
     padding-right: 5.8rem;
   }
 
-  &__form {
-    margin-bottom: 4rem;
-  }
-
+  // CONTENT BOX TITLES
   &__titles {
     margin-bottom: 2.4rem;
+
+    @media (max-width: $tablet) {
+      text-align: center;
+    }
   }
 
+  // CONTENT BOX TEXT
   &__text {
-    margin-bottom: 4rem;
+    @media (max-width: $tablet) {
+      text-align: center;
+      margin-bottom: 3.3rem;
+    }
 
     @media (min-width: $tablet) {
+      margin-bottom: 4rem;
       width: 75%;
     }
 
@@ -40,38 +51,89 @@
     }
   }
 
-  &__input {
-    width: 59%;
-    margin-right: -17.1rem;
-    padding-right: 17.8rem;
-  }
+  // CONTENT BOX FORM
+  &__form {
+    @media (max-width: $tablet) {
+      display: flex;
+      flex-direction: column;
+      order: 4;
+    }
 
-  &__input-label {
-    display: block;
-    font-size: 1.4rem;
-    font-weight: bold;
-    line-height: 1.4rem;
-    color: #fb3e3e;
-    padding: 0.8rem 3.2rem;
-
-    visibility: hidden;
-    opacity: 0;
-    transform: translateY(-4rem);
-    transition: all 0.3s ease-out;
-
-    &.active {
-      visibility: visible;
-      opacity: 1;
-      transform: translateY(0);
+    @media (min-width: $tablet) {
+      height: 9rem;
     }
   }
 
+  // CONTENT BOX INPUT
+  &__input {
+    @media (max-width: $tablet) {
+      margin-bottom: 1.6rem;
+    }
+
+    @media (min-width: $tablet) {
+      width: 60%;
+      min-width: 40rem;
+      margin-right: -17.1rem;
+      padding-right: 17.8rem;
+    }
+
+    @media (min-width: $desktop-small) {
+      min-width: 40rem;
+      width: 75%;
+    }
+
+    @media (min-width: $desktop-large) {
+      width: 55%;
+    }
+  }
+
+  // CONTENT BOX INPUT LABEL
+  &__input-label {
+    @media (max-width: $tablet) {
+      display: none;
+    }
+
+    @media (min-width: $tablet) {
+      display: block;
+      font-size: 1.4rem;
+      font-weight: bold;
+      line-height: 1.4rem;
+      color: #fb3e3e;
+      padding: 0.8rem 3.2rem;
+
+      visibility: hidden;
+      opacity: 0;
+      transform: translateY(-4rem);
+      transition: all 0.3s ease-out;
+
+      &.active {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+
+  // CONTENT BOX SPONSORS
   &__sponsors {
     display: flex;
     align-items: center;
 
     & img:not(:last-child) {
-      margin-right: 4rem;
+      @media (min-width: $tablet) {
+        margin-right: 4rem;
+      }
+    }
+
+    @media (max-width: $tablet) {
+      justify-content: space-around;
+      margin-bottom: 4.8rem;
+    }
+
+    & > img {
+      @media (max-width: $tablet) {
+        height: 2rem;
+      }
     }
   }
 }

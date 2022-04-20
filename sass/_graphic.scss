@@ -1,4 +1,8 @@
 .graphic {
+  @media (max-width: $tablet) {
+    display: none;
+  }
+
   @media (min-width: $tablet) {
     grid-row: 3 / -1;
     grid-column: 1 / 2;

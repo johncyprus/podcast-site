@@ -30,6 +30,10 @@ html {
 body {
   font-family: $font-primary;
   font-weight: 400;
+
+  @media (max-width: $tablet) {
+    position: relative;
+  }
 }
 
 .container {
@@ -37,9 +41,14 @@ body {
   height: 100vh;
   max-height: 100vh;
 
-  display: grid;
+  @media (max-width: $tablet) {
+    display: flex;
+    flex-direction: column;
+    padding: 6.2rem 2.4rem;
+  }
 
   @media (min-width: $tablet) {
+    display: grid;
     grid-template-rows: 1fr min-content 1fr;
     grid-template-columns:
       [all-start] min-content
